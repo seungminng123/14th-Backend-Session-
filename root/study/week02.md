@@ -38,5 +38,5 @@ DB
 
 ---
 
-### 과제 제출
+### 2주차 과제 제출
 <img width="713" height="776" alt="image" src="https://github.com/user-attachments/assets/9d399596-1004-4ead-9e54-8012fed7c985" />
