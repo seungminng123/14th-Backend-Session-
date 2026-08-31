@@ -18,55 +18,48 @@ JPQL
 
 ## 게시글 생성 전체적인 흐름
 
-① 프론트에서 요청
+### ① 프론트에서 요청
 
-{
-  "title": "안녕",
-  "content": "첫 글"
-}
+`{ "title": "안녕", "content": "첫 글" }`
 
-        ↓
+↓
 
-② Controller
+### ② Controller
 "게시글 생성 요청이구나"
 
-        ↓
+↓
 
-③ CreatePostRequest DTO
+### ③ CreatePostRequest DTO
 데이터를 담아서 Service로 전달
 
-        ↓
+↓
 
-④ Service
-Post Entity를 만들고
+### ④ Service
+Post Entity를 생성
 
-        ↓
+↓
 
-⑤ Repository
+### ⑤ Repository
+`postRepository.save(post)`
 
-postRepository.save(post)
+↓
 
-        ↓
-
-⑥ JPA
-
+### ⑥ JPA
 DB 저장 작업 처리
 
-        ↓
+↓
 
-⑦ Database
+### ⑦ Database
+게시글 실제 저장
 
-실제로 게시글 저장
+↓
 
-        ↓
+### ⑧ PostResponse DTO 생성
 
-⑧ PostResponse DTO 생성
+↓
 
-        ↓
-
-⑨ Controller
-
-JSON으로 사용자에게 응답
+### ⑨ Controller
+JSON 형태로 사용자에게 응답
 
 ## 영속성 컨텍스트
 이해못함 나중에 공부할랭
